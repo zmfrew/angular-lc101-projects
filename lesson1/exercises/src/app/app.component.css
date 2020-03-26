@@ -1,0 +1,17 @@
+.container {
+    border-bottom: 2px solid black;
+    padding-bottom: 3em;
+    padding-top: 3em;
+}
+
+.col-3:nth-child(1),
+.col-3:nth-child(2) {
+    border-right: 2px dotted black;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3em;
+ }
