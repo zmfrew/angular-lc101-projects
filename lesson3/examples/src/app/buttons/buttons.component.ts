@@ -7,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
    buttonHeading: string = "Buttons"
-   inactive: boolean = false;
+   jokeHeading = "Joke Buttons"
+   isGoldActive: boolean = true;
+   isSilverActive: boolean = true;
+   isCopperActive: boolean = true;
+
+   active = true
+   location = 'center'
 
    constructor() { }
 
    ngOnInit() { }
 
+   activateButtons() {
+      this.isGoldActive = true
+      this.isSilverActive = true
+      this.isCopperActive = true
+   }
+
+   shiftLocation(oldLocation: string) {
+      while (this.location === oldLocation) {
+         this.location = ['left', 'right', 'center'][Math.floor(Math.random() * 3)];
+      }
+
+      return this.location;
+   }
 }
